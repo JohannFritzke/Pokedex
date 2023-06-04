@@ -1,7 +1,7 @@
 {
   "name": "pokedex",
   "version": "0.1.0",
-  "homepage": "https://johannfritzke.github.io/pokedex",
+  "homepage": "https://JohannFritzke.github.io/Pokedex",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
