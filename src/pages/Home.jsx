@@ -14,7 +14,6 @@ export const Home=()=>{
         var endPoints=[];
         for(var i=1;i<=1010;i++){
             endPoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-            //teste do commit
         }
         axios.all(endPoints.map((endPoints)=>axios.get(endPoints)))
         .then((res)=> setPokemons(res))
