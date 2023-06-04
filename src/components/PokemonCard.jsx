@@ -17,7 +17,7 @@ export default function PokemonCard ({name, img,types}){
     return(
         <div className="cardPoke">
             <img src={img} alt="" />
-            <h5>{}</h5>
+            <h5>{name}</h5>
             <p>{typesHandler()}</p>
         </div>
     )
