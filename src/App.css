@@ -1,0 +1,151 @@
+*{
+  background-color: #202124;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+input{
+  border:solid #51535b 1px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+  outline: none;
+}
+
+.navBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.search{
+  padding: 2px 5px 0px 5px;
+  border:solid #51535b 1px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: none;
+  background-color: #202124;
+}
+
+.search:hover{
+  background-color: #51535b;
+}
+
+.cardPoke{
+  border: solid #51535bae 0.5px;
+  width: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 4px #fefefe5d;
+}
+
+.cardPoke:hover,
+.cardPoke:hover img,
+.cardPoke:hover .types,
+.cardPoke:hover h5
+{
+  background-color: #51535b;
+}
+
+.cardPoke,.cardPoke img{
+  border-radius: 5%;
+}
+
+
+.cardPoke img{
+  width: 100%;
+}
+
+main{
+  margin: 10px 50px 0px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.cardPoke p, h5{
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+
+.types{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90%;
+}
+.types p{
+  padding: 5px;
+  width: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type2{
+  margin-left: 10px;
+}
+
+.type1,.type2{
+  border: solid white 1px;
+  border-radius: 13%;
+}
+
+.grass{
+  background-color: #7c5;
+}
+.normal{
+  background-color: #aa9;
+}
+.fire{
+  background-color: #f42;
+}
+.water{
+  background-color: #39f;
+}
+.electric{
+  background-color: #fc3;
+}
+.ice{
+  background-color: #6cf;
+}
+.fighting{
+  background-color: #b54;
+}
+.poison{
+  background-color: #a59;
+}
+.ground{
+  background-color: #db5;
+}
+.flying{
+  background-color: #89f;
+}
+.psychic{
+  background-color: #f59;
+}
+.bug{
+  background-color: #ab2;
+}
+.rock{
+  background-color: #ba6;
+}
+.ghost{
+  background-color: #66b;
+}
+.dragon{
+  background-color: #76e;
+}
+.dark{
+  background-color: #754;
+}
+.steel{
+  background-color: #aab;
+}
+.fairy{
+  background-color: #e9e;
+}
