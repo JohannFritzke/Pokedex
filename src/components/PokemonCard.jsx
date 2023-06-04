@@ -10,14 +10,14 @@ export default function PokemonCard ({name, img,types}){
                     
         }else{
             return  <div className="types">
-                     <p className={`type1 ${types[0].type.name}`}>{types[0].tygit push -u origin mainpe.name}</p>
+                     <p className={`type1 ${types[0].type.name}`}>{types[0].type.name}</p>
                     </div>
         }   
     }
     return(
         <div className="cardPoke">
             <img src={img} alt="" />
-            <h5>{name}</h5>
+            <h5>{}</h5>
             <p>{typesHandler()}</p>
         </div>
     )
