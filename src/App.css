@@ -1,5 +1,5 @@
 *{
-  background-color: #202124;
+  background-color: #2e2f31;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
@@ -11,7 +11,10 @@ input{
   border-bottom-left-radius: 5px;
   border-right: none;
   outline: none;
+  box-shadow: 2px 2px 3px #fefefe5d;
 }
+
+
 
 .navBar{
   display: flex;
@@ -20,32 +23,48 @@ input{
   padding: 30px;
 }
 
+.navBar,.navBar *{
+  background-color: #202124;
+}
+
 .search{
+  box-shadow: 2px 2px 3px  #fefefe5d;
   padding: 2px 5px 0px 5px;
   border:solid #51535b 1px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   border-left: none;
-  background-color: #202124;
-}
-
-.search:hover{
-  background-color: #51535b;
+  
 }
 
 .cardPoke{
   border: solid #51535bae 0.5px;
-  width: 13%;
+  width: 180px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 2px 2px 4px #fefefe5d;
+  position: relative;
+}
+
+.cardPoke, .cardPoke *{
+  background-color: #202124;
+}
+
+.cardPoke .number{
+  display: flex;
+  justify-content: right;
+  width: 95%;
+  height: 0.5%;
+  margin-top: 3px;
 }
 
 .cardPoke:hover,
 .cardPoke:hover img,
 .cardPoke:hover .types,
-.cardPoke:hover h5
+.cardPoke:hover h5,
+.cardPoke:hover .number
 {
   background-color: #51535b;
 }
@@ -78,6 +97,7 @@ main{
   justify-content: center;
   align-items: center;
   font-size: 90%;
+  height: 34px;
 }
 .types p{
   padding: 5px;
@@ -85,6 +105,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 12%;
 }
 .type2{
   margin-left: 10px;
@@ -92,7 +113,7 @@ main{
 
 .type1,.type2{
   border: solid white 1px;
-  border-radius: 13%;
+  
 }
 
 .grass{

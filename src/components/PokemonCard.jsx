@@ -1,6 +1,6 @@
 
 
-export default function PokemonCard ({name, img,types}){
+export default function PokemonCard ({name, img,types,number}){
     const typesHandler=()=>{
         if(types[1]){
             return  <div className="types">
@@ -16,7 +16,8 @@ export default function PokemonCard ({name, img,types}){
     }
     return(
         <div className="cardPoke">
-            <img src={img} alt="" />
+            <p className="number">#{number}</p>
+            <img src={img} alt=""/>
             <h5>{name}</h5>
             <p>{typesHandler()}</p>
         </div>
