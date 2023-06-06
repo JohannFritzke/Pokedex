@@ -64,7 +64,8 @@ input{
 .cardPoke:hover img,
 .cardPoke:hover .types,
 .cardPoke:hover h5,
-.cardPoke:hover .number
+.cardPoke:hover .number,
+.cardPoke:hover .shiny
 {
   background-color: #51535b;
 }
@@ -114,6 +115,12 @@ main{
 .type1,.type2{
   border: solid white 1px;
   
+}
+
+.shiny{
+  cursor: pointer;
+  color: yellow;
+  position: absolute;
 }
 
 .grass{
