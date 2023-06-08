@@ -17,19 +17,22 @@ export default function PokemonCard({ name, img, types, number }) {
       );
     }
   };
-
   const shiny = (id) => {
     var shiny = document.getElementById(id);
 
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((resp) => {
-      if(shiny.src.includes("shiny")){
-        shiny.src = resp.data.sprites.other["official-artwork"].front_default;
-      }else if(resp.data.sprites.other["official-artwork"].front_shiny != null ){
-        shiny.src = resp.data.sprites.other["official-artwork"].front_shiny;
-      }
-    });
-
-    //shiny.src=requi.data.sprites.other["official-artwork"].front_shiny
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+      .then((resp) => {
+        if (shiny.src.includes("shiny"))
+        {
+          shiny.src = resp.data.sprites.other["official-artwork"].front_default;
+        }
+        
+        else if (resp.data.sprites.other["official-artwork"].front_shiny != null)
+        {
+          shiny.src = resp.data.sprites.other["official-artwork"].front_shiny;
+        }
+      });
   };
   return (
     <div className="cardPoke">

@@ -2,26 +2,33 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import PokemonCard from "../components/PokemonCard";
 import axios from "axios";
+import LoadScreen from "../components/LoadScreen";
 
 export const Home = () => {
   const [pokemons, setPokemons] = useState([]);
- 
+
   useEffect(() => {
     getPokemons();
   }, []);
 
-  const getPokemons = () => {
+  const getPokemons = async () => {
+
     var endPoints = [];
-    for (var i = 1; i <= 1010; i++) {
+    for (var i = 0; i <= 1010; i++) {
       if (i > 0) {
         endPoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
       }
     }
-    axios
-      .all(endPoints.map((endPoints) => axios.get(endPoints)))
-      .then((res) => setPokemons(res));
-      
+    try {
+      const responses = await axios.all(
+        endPoints.map((endPoint) => axios.get(endPoint))
+      );
+      setPokemons(responses);
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   const pokemonFilter = (name) => {
     var filter = [];
     if (name === "") {
@@ -33,10 +40,6 @@ export const Home = () => {
       }
     }
     setPokemons(filter);
-    console.log(setPokemons);
-    pokemons.map((p) => {
-      return console.log(p.data.name);
-    });
   };
 
   return (
@@ -45,15 +48,19 @@ export const Home = () => {
         <Header pokemonFilter={pokemonFilter} />
       </header>
       <main>
-        {pokemons.map((pokemon, key) => (
-          <PokemonCard
-            name={pokemon.data.name}
-            key={key}
-            img={pokemon.data.sprites.other["official-artwork"].front_default}
-            types={pokemon.data.types}
-            number={pokemon.data.id}
-          />
-        ))}
+        {pokemons.length === 0 ? (
+          <LoadScreen />
+        ) : (
+          pokemons.map((pokemon, key) => (
+            <PokemonCard
+              name={pokemon.data.name}
+              key={key}
+              img={pokemon.data.sprites.other["official-artwork"].front_default}
+              types={pokemon.data.types}
+              number={pokemon.data.id}
+            />
+          ))
+        )}
       </main>
     </div>
   );
